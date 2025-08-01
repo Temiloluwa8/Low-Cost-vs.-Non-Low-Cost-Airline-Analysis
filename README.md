@@ -119,16 +119,18 @@ WHERE ebit_usd IS NOT NULL
   AND passenger_yield IS NOT NULL
   AND avg_fleet_age IS NOT NULL
 GROUP BY low_cost_carrier;
+````
 
 
 ### identify top-performing regions globally.
+```
 SELECT
   region,
   AVG(ebit_usd) AS avg_ebit,
   AVG(passenger_yield) AS avg_yield
 FROM airline_data
 GROUP BY region;
-
+```
 
 ## Data Visualization
 <img width="757" height="446" alt="airline dashboard" src="https://github.com/user-attachments/assets/0f9d8997-f6a5-4677-9e14-95f03fb0a1e6" />
