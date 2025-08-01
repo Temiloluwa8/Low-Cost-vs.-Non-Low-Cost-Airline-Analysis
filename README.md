@@ -127,11 +127,6 @@ SELECT
 FROM airline_data
 GROUP BY region;
 
-### RANKX to rank airlines 
-SELECT
-  airline_name,
-  RANK() OVER (ORDER BY ebit_usd DESC) AS ebit_rank
-FROM airline_data;
 
 ## Data Visualization
 <img width="757" height="446" alt="airline dashboard" src="https://github.com/user-attachments/assets/0f9d8997-f6a5-4677-9e14-95f03fb0a1e6" />
