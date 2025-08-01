@@ -2,6 +2,18 @@
 ## L&N Airline Analysis: Low-Cost vs. Non-Low-Cost Carriers
 _This Power BI project compares low-cost and traditional airlines using metrics like EBIT, fleet age, and passenger yield. It provides visual insights and recommendations to improve airline profitability and efficiency_
 
+## Table of Contents
++ Project Overview
++ Data Source
++ Importance of the Project
++ Tools Used
++ Business Questions
++ Data Overview
++ Analysis Breakdown
++ SQL Query Used
++ Data Visualization
++ Recommendations
+
 ## Project Overview
   This project focuses on analyzing and comparing low-cost and non-low-cost (traditional) airlines using key business metrics. The objective is to evaluate performance, efficiency, and profitability between the two types of carriers.
 Using a structured dataset, I performed data cleaning in Excel, applied SQL for metric calculation and grouping, and built a comprehensive Power BI dashboard to visualize insights.
@@ -23,6 +35,11 @@ The final dashboard enables interactive exploration and clear comparisons betwee
 + Strategic Planning: Provides valuable benchmarks for airlines aiming to improve efficiency or enter new market segments.
 
 + Industry Relevance: Addresses a timely topic in aviation where low-cost models are growing, yet face profitability challenges.
+
+## Data Source
+This dataset was generously shared within a data community group.
+Special thanks to Silvia Wutche for providing the airline performance dataset used in this analysis.
+The dataset includes key metrics such as EBIT, Load Factor, Fleet Age, Passenger Yield, and more allowing for comparative analysis between low-cost and non-low-cost carriers.
 
 ## Tool Used:
 #### Microsoft Excel
@@ -59,12 +76,12 @@ The dataset contains information about various global airlines, focusing on both
 ## Analysis Breakdown
 This project followed a structured approach to explore and compare key performance metrics between low-cost and non-low-cost airlines.
 
-####### Data Cleaning (Excel)
+#### Data Cleaning (Excel)
 + Removed missing and duplicate records
 + Ensured consistent data types for numerical fields (e.g., EBIT, Load Factor)
 + Verified low_cost_carrier labels (Y or N) for accurate filtering
 
-####### Data Exploration & Querying (SQL)
+#### Data Exploration & Querying (SQL)
 + Grouped airlines based on low_cost_carrier status
 + Used aggregation functions like AVG() to compute:
    + Average EBIT (ebit_usd)
@@ -72,13 +89,13 @@ This project followed a structured approach to explore and compare key performan
    + Average Number of Routes
    + Average Fleet Age
 
-####### Visualization (Power BI)
+#### Visualization (Power BI)
 + Clustered Bar Chart: Compared average EBIT by carrier type
 + Column Chart: Displayed comparisons for Load Factor, Passenger Yield, and Route Count
 + Card Visuals: Highlighted key KPIs
 + Slicer: Enabled dynamic filtering between low-cost and traditional airlines
 
-####### Insight Generation
+#### Insight Generation
 Analyzed metric differences to understand:
   + Profitability patterns
   + Operational strengths (fleet age, route network)
@@ -117,6 +134,19 @@ SELECT
 FROM airline_data;
 
 ## Data Visualization
+<img width="757" height="446" alt="airline dashboard" src="https://github.com/user-attachments/assets/0f9d8997-f6a5-4677-9e14-95f03fb0a1e6" />
 
-4. How does the passenger yield compare across both airline categories?
-    The goal is to uncover performance trends that can guide strategic decisions for airline operators and industry analysts.
+## Recommendations
+Based on the analysis of low-cost and non-low-cost airlines, the following recommendations are proposed:
++ Leverage Fleet Efficiency
+Low-cost carriers tend to operate with newer fleets. Traditional carriers should consider renewing older aircraft to improve fuel efficiency and reduce maintenance costs.
++ Optimize Route Strategy
+Non-low-cost airlines operate more routes on average. However, reviewing underperforming or low-yield routes could improve profitability and align with demand trends.
++ Improve Passenger Yield
+Since non-low-cost carriers have higher passenger yield, low-cost airlines can explore value-added services (e.g., premium seating, in-flight meals) without compromising affordability.
++ Boost Load Factor
+Both categories should aim to maintain high load factors. Dynamic pricing models and route scheduling based on seasonal demand can help maximize seat occupancy.
++ Benchmark EBIT Across Models
+Airlines should monitor EBIT performance relative to their model (low-cost or traditional) and adjust business operations (e.g., ancillary revenue strategies) to stay competitive.
+ 
+
