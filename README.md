@@ -103,6 +103,7 @@ Analyzed metric differences to understand:
 
 ## SQL Query Used
 ### Compare average values for key metrics between low-cost and non-low-cost carriers
+```
 SELECT
   low_cost_carrier,
   COUNT(*) AS airline_count,
@@ -118,6 +119,7 @@ WHERE ebit_usd IS NOT NULL
   AND passenger_yield IS NOT NULL
   AND avg_fleet_age IS NOT NULL
 GROUP BY low_cost_carrier;
+
 
 ### identify top-performing regions globally.
 SELECT
